@@ -55,13 +55,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav w-100 justify-content-around ps-5">
-          <li class="nav-item pe-5 ps-3"><a href="test.html"
+          <li class="nav-item pe-5 ps-3"><a href="events.html"
               class="navbar-brand nav-link active text-light">الفعاليات</a>
           </li>
           <li class="nav-item pe-5 ps-3"><a href="contant.html" class="navbar-brand nav-link active text-light">اتصل
               بنا</a></li>
           <li class="nav-item pe-5 ps-3"><a href="about.html" class="navbar-brand nav-link active text-light">حول
               الموقع</a></li>
+          <li class="nav-item pe-5 ps-3"><a href="test.html" class="navbar-brand nav-link active text-light">
+              اختبار</a></li>
         </ul>
       </div>
     </div>
@@ -71,7 +73,7 @@
 
   <main class="container-fluid my-5">
 
-    <h2 class="">فعاليات بارزا لهذا الاسبوع: </h2>
+    <h2 class="">فعاليات بارزا لهذا الاسبوع : </h2>
 
     <div class="slid-container d-flex overflow-auto p-1">
 
@@ -127,7 +129,7 @@
 
     </div>
 
-    <h2>تصنيفات : </h2>
+    <h2 class="my-3">تصنيفات : </h2>
 
     <button type="button" class="btn btn-outline-primary filter-btn" data-category="all">الكل</button>
     <button type="button" class="btn btn-outline-secondary filter-btn" data-category="sport">رياضة</button>
@@ -151,6 +153,16 @@
         <img src="assets/img/icon3.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card sport</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="cultural">
+        <img src="assets/img/icon3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card cultural</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -217,8 +229,74 @@
         </div>
       </div>
 
+      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="sport">
+        <img src="assets/img/icon3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card sport</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
+      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="sport">
+        <img src="assets/img/icon3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card sport</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
+    </div>
+
+    <div class="newevents-container mt-4">
+      <h2>أحدث الفعاليات :</h2>
+
+      <div class="overflow-auto d-flex p-1 slid-container">
+
+        <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
+          <img src="assets/img/icon3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
+          <img src="assets/img/icon3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
+          <img src="assets/img/icon3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
+          <img src="assets/img/icon3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
 
@@ -245,14 +323,14 @@
     const cards = document.querySelectorAll(".badge-container .card");
 
     filterBtns.forEach(btn => {
-      btn.addEventListener("click",() => {
+      btn.addEventListener("click", () => {
         const category = btn.getAttribute("data-category");
         cards.forEach(card => {
-          if (category === "all" || card.getAttribute("data-category") === category){
+          if (category === "all" || card.getAttribute("data-category") === category) {
             card.style.display = "block";
           }
           else {
-            card.style.display= "none";
+            card.style.display = "none";
           }
         });
       });
