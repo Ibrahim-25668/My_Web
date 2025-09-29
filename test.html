@@ -91,7 +91,7 @@
       </div>
 
     </div>
-    <div id="cards-under-badges">
+    <div class="cards-under-badges">
       <button type="button" class=" btn btn-outline-primary filter-btn" data-category="all">all</button>
       <button type="button" class=" btn btn-outline-secondary filter-btn" data-category="sport">sport</button>
       <button type="button" class="btn btn-outline-success filter-btn" data-category="music">music</button>
@@ -142,7 +142,7 @@
   <script src="assets/JS/script.js"></script>
   <script>
    const filterBtns = document.querySelectorAll(".filter-btn");
-const cards = document.querySelectorAll("#cards-under-badges .card"); // فقط كروت تحت البادجات
+const cards = document.querySelectorAll(".cards-under-badges .card"); // فقط كروت تحت البادجات
 
 filterBtns.forEach(btn => {
   btn.addEventListener("click", () => {
