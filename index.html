@@ -31,6 +31,18 @@
 
     .card {
       scroll-snap-align: start;
+      position: relative;
+    }
+    .badge-new {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: red;
+      color: white;
+      padding: 3px 3px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -78,7 +90,7 @@
     <div class="slid-container d-flex overflow-auto p-1">
 
       <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
+        <img src="assets/img/sport_event3.jpg" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -88,7 +100,7 @@
       </div>
 
       <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex ">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
+        <img src="assets/img/cultural_event2.jpg" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -98,27 +110,7 @@
       </div>
 
       <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
-        </div>
-      </div>
-
-      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
-        </div>
-      </div>
-
-      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
+        <img src="assets/img/cultural_event3.jpg" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -135,7 +127,7 @@
     <button type="button" class="btn btn-outline-secondary filter-btn" data-category="sport">رياضة</button>
     <button type="button" class="btn btn-outline-success filter-btn" data-category="cultural">ثقافة</button>
     <button type="button" class="btn btn-outline-warning filter-btn" data-category="art">فن</button>
-    <button type="button" class="btn btn-outline-info filter-btn" data-category="family">عائلي</button>
+
 
     <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
 
@@ -160,7 +152,7 @@
       </div>
 
       <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="cultural">
-        <img src="assets/img/cultural.jpg" class="card-img-top" alt="...">
+        <img src="assets/img/cultural_event1.jpg" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">فعاليات ثقافة </h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -170,7 +162,7 @@
       </div>
 
       <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="cultural">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
+        <img src="assets/img/cultural_event2.jpg" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">فعاليات ثقافة </h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -199,38 +191,8 @@
         </div>
       </div>
 
-      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="art">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">فعاليات فن</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
-        </div>
-      </div>
-
-      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="family">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">فعاليات عائلية</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
-        </div>
-      </div>
-
-      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="family">
-        <img src="assets/img/family_event2.jpg" class="card-img-top" alt="...">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">فعاليات عائلية</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
-        </div>
-      </div>
-
       <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="sport">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
+        <img src="assets/img/sport_event3.jpg" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">فعاليات رياضة</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -239,15 +201,15 @@
         </div>
       </div>
 
-      <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="sport">
-        <img src="assets/img/logo.png" class="card-img-top" alt="...">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">فعاليات رياضة</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
+       <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="sport art cultural">
+          <img src="assets/img/logo.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
+          </div>
         </div>
-      </div>
 
     </div>
 
@@ -257,7 +219,8 @@
       <div class="overflow-auto d-flex p-1 slid-container">
 
         <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-          <img src="assets/img/logo.png" class="card-img-top" alt="...">
+          <span class="badge-new">NEW</span>
+          <img src="assets/img/cultural_event3.jpg" class="card-img-top" alt="...">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -267,27 +230,8 @@
         </div>
 
         <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-          <img src="assets/img/logo.png" class="card-img-top" alt="...">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
-          </div>
-        </div>
-
-        <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-          <img src="assets/img/logo.png" class="card-img-top" alt="...">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="event.html" class="btn btn-primary  mt-auto">التفاصيل</a>
-          </div>
-        </div>
-
-        <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex">
-          <img src="assets/img/logo.png" class="card-img-top" alt="...">
+          <span class="badge-new">NEW</span>
+          <img src="assets/img/sport_event4.jpg" class="card-img-top" alt="...">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -321,13 +265,17 @@
  <script>
   const filterBtns = document.querySelectorAll(".filter-btn");
   const cards = document.querySelectorAll(".badge-container .card");
+
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       const category = btn.getAttribute("data-category");
+
       filterBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
+
       cards.forEach(card => {
-        if (category === "all" || card.getAttribute("data-category") === category) {
+         const categories = card.getAttribute("data-category").split(" "); 
+      if (category === "all" || categories.includes(category)) {
           card.classList.remove("d-none");
         } else {
           card.classList.add("d-none");
@@ -339,5 +287,4 @@
 
 
 </body>
-
 </html>
