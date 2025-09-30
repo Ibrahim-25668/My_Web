@@ -1,0 +1,23 @@
+    header,
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: inline;
+    }
+
+    .slid-container {
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+    }
+
+    .card {
+      scroll-snap-align: start;
+    }
