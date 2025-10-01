@@ -1,23 +1,43 @@
-    header,
-    footer {
-      background-color: #0d6efd;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
+ header,
+ footer {
+   background-color: #0d6efd;
+   color: white;
+   padding: 1rem;
+   text-align: center;
+ }
 
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      display: inline;
-    }
+ footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   display: inline;
+ }
 
-    .slid-container {
-      scroll-snap-type: x mandatory;
-      gap: 1rem;
-    }
+ .slid-container {
+   scroll-snap-type: x mandatory;
+   gap: 1rem;
+ }
 
-    .card {
-      scroll-snap-align: start;
-    }
+ .card {
+   scroll-snap-align: start;
+   position: relative;
+ }
+
+ .badge-new {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background-color: red;
+   color: white;
+   padding: 3px 3px;
+   border-radius: 5px;
+   font-size: 0.8rem;
+   font-weight: bold;
+ }
+
+ .card-more {
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: #f8f9fa;
+   border: 2px dashed #0d6efd;
+ }
