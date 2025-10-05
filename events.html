@@ -72,29 +72,25 @@
 
   <main class="container-fluid my-4">
 
-    <!-- شريط البحث -->
     <div class="search-bar input-group">
       <input type="text" id="searchInput" class="form-control border" placeholder="ابحث عن فعالية...">
       <button class="btn btn-outline-primary">بحث</button>
     </div>
 
-    <!-- زر الفلترة -->
     <div class="text-center mb-3">
       <button id="filterToggle" class="btn btn-outline-primary">
         فلترة
       </button>
     </div>
 
-    <!-- خيارات الفلترة -->
     <div id="filterOptions" class="d-none text-center">
-      <!-- فلترة حسب التاريخ -->
+
       <div class="mb-3">
         <label class="form-label">التاريخ (من - إلى)</label>
         <input type="date" id="dateFrom" class="form-control mb-2">
         <input type="date" id="dateTo" class="form-control">
       </div>
 
-      <!-- فلترة حسب المكان -->
       <div class="mb-3">
         <label class="form-label">المكان</label>
         <select id="placeFilter" class="form-select">
@@ -114,7 +110,6 @@
         </select>
       </div>
 
-      <!-- فلترة حسب النوع -->
       <div class="mb-3">
         <label class="form-label">النوع</label>
         <select id="typeFilter" class="form-select">
@@ -127,11 +122,9 @@
       </div>
     </div>
 
-    <!-- كل الكروت في حاوية واحدة -->
     <div id="cardsWrapper">
       <div class="slid-container" id="slider1">
 
-        <!--                               first slider                                        -->
         <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
 
           <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="cultural">
@@ -174,7 +167,7 @@
           </div>
 
         </div>
-        <!--                               second slider                                -->
+
         <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
 
           <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="cultural">
@@ -226,7 +219,7 @@
           </div>
 
         </div>
-        <!--                        Therd slider                          -->
+
         <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
 
           <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="sport">
@@ -278,7 +271,7 @@
           </div>
 
         </div>
-        <!--                last slider                   -->
+
         <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
 
           <div class="card flex-shrink-0" style="width: 16rem; display:inline-flex" data-category="sport">
@@ -366,13 +359,10 @@
       const placeFilter = document.getElementById("placeFilter");
       const typeFilter = document.getElementById("typeFilter");
 
-      // إظهار/إخفاء الفلاتر
       filterToggle.addEventListener("click", () => {
         filterOptions.classList.toggle("d-none");
       });
 
-      // فلترة
-      // فلترة
       function applyFilters() {
         const q = (searchInput.value || "").trim().toLowerCase();
 
@@ -388,7 +378,6 @@
           const text = card.innerText;
           const matchSearch = (!q || title.includes(q));
 
-          // ✅ تعديل الفلترة حسب المكان
           const matchPlace = (place === "all" || text.includes(place));
 
           const matchType = (type === "all" || card.dataset.category.split(" ").includes(type));
@@ -408,8 +397,6 @@
         renderCards(filtered);
       }
 
-
-      // ترتيب الكروت داخل سلايدرات
       function renderCards(cards) {
         cardsWrapper.innerHTML = "";
         let slider = null;
@@ -424,14 +411,12 @@
         });
       }
 
-      // ربط الأحداث
       [searchInput, dateFrom, dateTo, placeFilter, typeFilter].forEach(el => {
         el.addEventListener("input", applyFilters);
         el.addEventListener("change", applyFilters);
       });
       searchBtn.addEventListener("click", applyFilters);
 
-      // أول مرة
       renderCards(allCards);
     });
   </script>
