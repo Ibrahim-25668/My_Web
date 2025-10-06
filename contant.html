@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> دليلك | اتصل بنا </title>
+  <title>دليلك | اتصل بنا</title>
   <link rel="icon" href="assets/img/logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/CSS/style.css">
@@ -24,22 +25,80 @@
       width: 100%;
       display: inline;
     }
+
+    body {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .contact-box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 750px;
+      padding: 2rem;
+    }
+
+    .nav-tabs .nav-link {
+      border-radius: 10px 10px 0 0;
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #0d6efd;
+      color: #fff;
+    }
+
+    .tab-content {
+      border: 2px solid #0d6efd;
+      border-top: none;
+      border-radius: 0 0 15px 15px;
+      padding: 2rem;
+    }
+
+    .input-group-text {
+      background: #0d6efd;
+      color: white;
+      border: none;
+    }
+
+    .form-control {
+      border-radius: 10px;
+    }
+
+    .btn-primary,
+    .btn-success {
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover,
+    .btn-success:hover {
+      transform: scale(1.03);
+    }
   </style>
 </head>
 
 <body>
   <header class="py-3 text-center bg-primary text-white">
     <img src="assets/img/logo.png" alt="دليلك" style="height:80px; display:block; margin:0 auto;">
-    <h1 class="mt-2">دليلك </h1>
+    <h1 class="mt-2">دليلك</h1>
   </header>
 
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-gradient
- shadow p-1
- ">
-    <div class="container-fluid ">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-gradient shadow p-1">
+    <div class="container-fluid">
       <a class="navbar-brand text-light" href="index.html">الرئيسية</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,35 +106,78 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav w-100 justify-content-around ps-5">
-          <li class="nav-item pe-5 ps-3"><a href="events.html" class="navbar-brand nav-link active text-light"> جميع
-              الفعاليات </a>
-          </li>
-          <li class="nav-item pe-5 ps-3"><a href="contant.html" class="navbar-brand nav-link active text-light">اتصل
-              بنا</a></li>
-          <li class="nav-item pe-5 ps-3"><a href="about.html" class="navbar-brand nav-link active text-light">حول
-              الموقع</a></li>
-          <li class="nav-item pe-5 ps-3"><a href="test.html" class="navbar-brand nav-link active text-light">
-              اختبار</a></li>
-          <li class="nav-item pe-5 ps-3"><a href="events-test.html" class="navbar-brand nav-link active text-light">
-              كل الفعاليات اختبار</a></li>
+          <li class="nav-item pe-5 ps-3"><a href="events.html" class="navbar-brand nav-link active text-light">جميع الفعاليات</a></li>
+          <li class="nav-item pe-5 ps-3"><a href="contact.html" class="navbar-brand nav-link active text-light">اتصل بنا</a></li>
+          <li class="nav-item pe-5 ps-3"><a href="about.html" class="navbar-brand nav-link active text-light">حول الموقع</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- main start -->
-
   <main class="container-fluid my-5">
+    <div class="contact-container">
+      <div class="contact-box">
+        <ul class="nav nav-tabs mb-3" id="contactTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="email-tab" data-bs-toggle="tab" data-bs-target="#email" type="button"
+              role="tab">عبر البريد الإلكتروني <i class="bi bi-envelope-fill"></i></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="phone-tab" data-bs-toggle="tab" data-bs-target="#phone" type="button"
+              role="tab">عبر الهاتف <i class="bi bi-telephone-fill"></i></button>
+          </li>
+        </ul>
 
+        <div class="tab-content" id="contactTabContent">
+
+          <div class="tab-pane fade show active" id="email" role="tabpanel">
+            <h4 class="mb-3 text-primary text-center">أرسل لنا رسالة عبر البريد الإلكتروني</h4>
+            <form id="contactForm">
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                <input id="name" type="text" class="form-control" placeholder="الاسم الكامل" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                <input id="emailInput" type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-chat-dots-fill"></i></span>
+                <textarea id="message" class="form-control" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
+              </div>
+              <div id="formAlert" style="display:none;"></div>
+              <button type="submit" class="btn btn-primary w-100"><i class="bi bi-send-fill"></i> إرسال</button>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="phone" role="tabpanel">
+            <h4 class="mb-3 text-primary text-center">تواصل معنا عبر الهاتف</h4>
+            <form id="phoneForm">
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                <input id="phoneName" type="text" class="form-control" placeholder="الاسم الكامل" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                <input id="phoneNumber" type="tel" class="form-control" placeholder="رقم الهاتف" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-chat-dots-fill"></i></span>
+                <textarea id="phoneMessage" class="form-control" rows="4" placeholder="ما هو سبب الاتصال؟"
+                  required></textarea>
+              </div>
+              <div id="phoneAlert" style="display:none;"></div>
+              <button type="submit" class="btn btn-success w-100"><i class="bi bi-telephone-outbound-fill"></i> طلب اتصال</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-
-  <!-- main end -->
 
   <footer class="bg-dark text-white py-1">
     <div class="d-flex justify-content-center align-items-center">
-
       <span class="me-3">جميع الحقوق محفوظة 2025 &copy;</span>
-
       <a href="https://instagram.com" target="_blank" class="text-white mx-2 fs-5"><i class="bi bi-instagram"></i></a>
       <a href="https://facebook.com" target="_blank" class="text-white mx-2 fs-5"><i class="bi bi-facebook"></i></a>
       <a href="https://t.me" target="_blank" class="text-white mx-2 fs-5"><i class="bi bi-telegram"></i></a>
@@ -83,8 +185,63 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/JS/script.js"></script>
 
+  <script>
+    const form = document.querySelector("#contactForm");
+    const alertBox = document.querySelector("#formAlert");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.querySelector("#name").value.trim();
+      const email = document.querySelector("#emailInput").value.trim();
+      const message = document.querySelector("#message").value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (name === "" || email === "" || message === "") {
+        alertBox.className = "alert alert-danger mt-3";
+        alertBox.innerText = "❌ الرجاء تعبئة جميع الحقول قبل الإرسال!";
+        alertBox.style.display = "block";
+      } else if (!emailPattern.test(email)) {
+        alertBox.className = "alert alert-danger mt-3";
+        alertBox.innerText = "📧 البريد الإلكتروني غير صالح!";
+        alertBox.style.display = "block";
+      } else {
+        alertBox.className = "alert alert-success mt-3";
+        alertBox.innerText = "✅ تم إرسال الرسالة بنجاح! شكرًا لتواصلك معنا.";
+        alertBox.style.display = "block";
+        form.reset();
+      }
+    });
+
+    const phoneForm = document.querySelector("#phoneForm");
+    const phoneAlert = document.querySelector("#phoneAlert");
+
+    phoneForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.querySelector("#phoneName").value.trim();
+      const number = document.querySelector("#phoneNumber").value.trim();
+      const message = document.querySelector("#phoneMessage").value.trim();
+      const phonePattern = /^[0-9]{9,14}$/;
+
+      if (name === "" || number === "" || message === "") {
+        phoneAlert.className = "alert alert-danger mt-3";
+        phoneAlert.innerText = " يرجى تعبئة جميع الحقول قبل الإرسال!";
+        phoneAlert.style.display = "block";
+      } else if (!phonePattern.test(number)) {
+        phoneAlert.className = "alert alert-danger mt-3";
+        phoneAlert.innerText = " الرقم غير صالح الرجاء ادخال رقم صحيح";
+        phoneAlert.style.display = "block";
+      } else {
+        phoneAlert.className = "alert alert-success mt-3";
+        phoneAlert.innerText = " تم إرسال طلب الاتصال بنجاح! سنتواصل معك قريبًا.";
+        phoneAlert.style.display = "block";
+        phoneForm.reset();
+      }
+    });
+  </script>
 </body>
 
 </html>
+```

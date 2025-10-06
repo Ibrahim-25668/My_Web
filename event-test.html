@@ -320,11 +320,9 @@
     </main>
 
     <script>
-        // التقاط ID من الرابط
         const params = new URLSearchParams(window.location.search);
         const eventId = params.get("id");
 
-        // تحديد جميع الأزرار التي تحمل نفس الكلاس
         const buttons = document.querySelectorAll(".buyTicketBtn");
 
         buttons.forEach((btn) => {
@@ -336,10 +334,8 @@
             `;
                 document.getElementById("globalAlert").innerHTML = alertBox;
 
-                // سكرول تلقائي لأعلى الصفحة حتى يشوف التنبيه
                 window.scrollTo({ top: 0, behavior: "smooth" });
 
-                // إخفاء التنبيه بعد 1.5 ثانية
                 setTimeout(() => {
                     const alert = document.getElementById("successAlert");
                     if (alert) {
