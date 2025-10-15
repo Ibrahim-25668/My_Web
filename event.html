@@ -31,6 +31,7 @@
   <header class="py-3 text-center bg-primary text-white">
     <img src="assets/img/logo.png" alt="دليلك" style="height:80px; display:block; margin:0 auto;">
     <h1 class="mt-2"> دليلك </h1>
+    <a href="en/event.html">English</a>
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-gradient
@@ -414,6 +415,15 @@
     if (eventId) {
       const selectedEvent = document.getElementById(eventId);
       selectedEvent.style.display = "block";
+    }
+
+    
+    // Find the language switch link (the one with "العربية" text)
+    const languageLink = document.querySelector('a[href="en/event.html"]');
+
+    // Update the href to include the id parameter if it exists
+    if (eventId && languageLink) {
+      languageLink.href = `en/event.html?id=${eventId}`;
     }
   </script>
 
