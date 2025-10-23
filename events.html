@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كل الفعاليات | دليلك</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/CSS/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+  <style>
+    .search-bar {
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    #filter_options {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+
+    .slid-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+                      <!-- Header Start -->
+  <header class="py-3 text-center bg-primary text-white">
+    <img src="assets/img/logo.png" alt="دليلك" style="height:80px; display:block; margin:0 auto;">
+    <h1 class="mt-2">دليلك </h1>
+    <a href="en/events_en.html"> <span class="fi fi-us"></a>
+
+    <button id="scroll_top" class="btn btn-primary position-fixed"
+      style="bottom: 60px; right: 25px; display: none; border-radius: 50%;">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    </header>
+                    <!-- Header End -->
+
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-gradient
+ shadow p-1
+ ">
+    <div class="container-fluid ">
+      <a class="navbar-brand text-light" href="index.html">الرئيسية</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav w-100 justify-content-around ps-5">
+          <li class="nav-item pe-5 ps-3"><a href="events.html" class="navbar-brand nav-link active text-light"> جميع
+              الفعاليات </a>
+          </li>
+          <li class="nav-item pe-5 ps-3"><a href="contact.html" class="navbar-brand nav-link active text-light">اتصل
+              بنا</a></li>
+          <li class="nav-item pe-5 ps-3"><a href="about.html" class="navbar-brand nav-link active text-light">حول
+              الموقع</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+                      <!-- main start -->
+  <main class="container-fluid my-4">
+
+    <div class="search-bar input-group">
+      <input type="text" id="search_input" class="form-control border" placeholder="ابحث عن فعالية">
+      <button class="btn btn-outline-primary">بحث</button>
+    </div>
+
+    <div class="text-center mb-3">
+      <button id="filter_toggle" class="btn btn-outline-primary">
+        فلترة
+      </button>
+    </div>
+
+    <div id="filter_options" class="d-none text-center">
+
+      <div class="mb-3">
+        <label class="form-label">التاريخ (من - إلى)</label>
+        <input type="date" id="date_to" class="form-control">
+        <input type="date" id="date_from" class="form-control mb-2">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">المكان</label>
+        <select id="place_filter" class="form-select">
+          <option value="all">الكل</option>
+          <option value="دمشق">دمشق</option>
+          <option value="حلب">حلب</option>
+          <option value="اللاذقية">اللاذقية</option>
+          <option value="الحسكة">الحسكة</option>
+          <option value="دير الزور">دير الزور</option>
+          <option value="القنيطرة">القنيطرة</option>
+          <option value="درعا">درعا</option>
+          <option value="طرطوس">طرطوس</option>
+          <option value="ادلب">ادلب</option>
+          <option value="السويداء">السويداء</option>
+          <option value="حمص">حمص</option>
+          <option value="حماه">حماه</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">النوع</label>
+        <select id="type_filter" class="form-select">
+          <option value="all">الكل</option>
+          <option value="sport">رياضة</option>
+          <option value="cultural">ثقافة</option>
+          <option value="art">فن</option>
+          <option value="family">عائلي</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="cards_wrapper">
+      <div class="slid-container" id="slider1">
+
+        <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural family">
+            <span class="badge-new">NEW</span>
+            <img src="assets/img/cultural_event3.jpg" class="card-img-top" alt="صورة تراث و مذاق">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> تراث ومذاق </h5>
+              <p class="card-text">التصنيف : مهرجان اكل شعبي </p>
+              <p> المكان : قلعة حارم-ادلب</p>
+              <p> التاريخ : من الاحد 12/10/2025 حتى الثلاثاء 28/10/2025</p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=food" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
+            <span class="badge-new">NEW</span>
+            <img src="assets/img/sport_event4.jpg" class="card-img-top" alt=" صورة تدريب ناشئين ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> تدريب الناشئين كرة القدم </h5>
+              <p class="card-text"> التصنيف : فعالية رياضية </p>
+              <p>المكان : الملعب البلدي-السويداء </p>
+              <p>التاريخ : من الخميس 30/10/2025 حتى الجمعة 28/11/2025</p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=football" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="family cultural">
+            <span class="badge-new">NEW</span>
+            <img src="assets/img/family_event.jpg" class="card-img-top" alt=" صورة معرض دمشق الدولي ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">معرض دمشق الدولي</h5>
+              <p class="card-text"> التصنيف : فعالية ثقافية-فنيه</p>
+              <p> المكان : مدبية المعارض-طريق المطار-دمشق</p>
+              <p> التاريخ : من الثلاثاء 25/11/2025 حتى الثلاثاء 25/12/2025</p>
+              <p></p>
+              <a href="event.html?id=damascus" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
+            <img src="assets/img/cultural_event2.jpg" class="card-img-top" alt=" صورة برمجها ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> برمجها </h5>
+              <p class="card-text"> التصنيف : فعالية تعليمية-تدريب ناشئين للبرمجة</p>
+              <p> المكان : المركز الثقافي-مقابل مشفى الشفاء الخاص-درعا </p>
+              <p> التاريخ : من الاثنين 6/10/2025 حتي الخميس 23/10/2025</p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=parmajha" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
+            <img src="assets/img/music_event1.jpg" class="card-img-top" alt=" صورة مهرجان ليالي حمص ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">مهرجان ليالي حمص </h5>
+              <p class="card-text"> التصنيف : فعالية فنية </p>
+              <p> المكان : المشتاية-وادي النصارى-حمص </p>
+              <p> التاريخ : من الجمعة 14/11/2025 حتى الثلاثاء 25/11/2025 </p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=homs" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
+            <img src="assets/img/sport_event3.jpg" class="card-img-top" alt=" صورة سباق سيارات ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">سباق سيارات </h5>
+              <p class="card-text"> التصنيف : فعالية رياضية </p>
+              <p> المكان :صيدنايا-ريف دمشق</p>
+              <p> التاريخ : من الجمعة 12/12/2025 حتى الثلاثاء 25/12/2025</p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=cars" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
+            <img src="assets/img/music_event2.jpg" class="card-img-top" alt=" صورة امسيات صوت البحر ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> امسيات صوت البحر </h5>
+              <p class="card-text"> التصنيف : فعالية فنية </p>
+              <p>المكان : هوليدي بيتش-طرطوس</p>
+              <p> التاريخ : الاحد 23/11/2025 حتى السبت 13/12/2025</p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=sea" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
+            <img src="assets/img/sport_event1.jpg" class="card-img-top" alt=" صورة سباق الدراجات الهوائية ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> سباق الدراجات الهوائية </h5>
+              <p class="card-text">التصنيف : فعالية رياضية </p>
+              <p> المكان : الإنطلاق من المدينة الرياضية في اللاذقية وصولا الى رأس شمرا </p>
+              <p> التاريخ : الاحد 30/11/2025 </p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=bike" class="btn btn-outline-primary mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
+            <img src="assets/img/sport_event2.jpg" class="card-img-top" alt=" صورة مسابقة السباح السوري ">
+            <div class="card-body d-flex flex-column ">
+              <h5 class="card-title"> مسابقة السباح السوري </h5>
+              <p class="card-text"> التصنيف : فعالية رياضية </p>
+              <p> المكان : مسبح الجلاء-دمشق</p>
+              <p> التاريخ : من الثلاثاء 2/12/2025 حتى السبت 20/12/2025 </p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=swim" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
+            <img src="assets/img/cultural_event5.jpg" class="card-img-top" alt=" صورة ملتقى نبض المعرفة ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> ملتقى نبض المعرفة </h5>
+              <p class="card-text"> التصنيف : فعالية تعليمية-ثقافية</p>
+              <p> المكان : المركز الثقافي-شارع البورسعيد-دير الزور</p>
+              <p> التاريخ : من الثلاثاء 11/11/2025 حتى السبت 29/11/2025 </p>
+              <p>لمعلومات اكثر اذهب الى التفاصيل </p>
+              <a href="event.html?id=forum" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
+            <img src="assets/img/art_event3.jpg" class="card-img-top" alt=" صورة الوان الطفولة ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> الوان الطفولة </h5>
+              <p class="card-text"> التصنيف : فعالية فنية-رسم</p>
+              <p> المكان : قاعة بسمة-العشة-ريف القنيطرة </p>
+              <p> التاريخ : من السبت 15/10/2025 حتى الاحد 23/10/2025 </p>
+              <p>لمعلومات اكثر اذهب الى التفاصيل</p>
+              <a href="event.html?id=color" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
+            <img src="assets/img/sport_event5.jpg" class="card-img-top" alt=" صورة ماراثون طرطوس ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> ماراثون طرطوس السياحي</h5>
+              <p class="card-text"> التصنيص : فعالية رياضية </p>
+              <p> المكان : بدءا من قلب الكورنيش البحري وصولا الى منتجع جواندا وبالعكس</p>
+              <p> التاريخ : يوم السبت 22/11/2025</p>
+              <p> لمعلومات اكثر اذهب الى التفاصيل</p>
+              <a href="event.html?id=race" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="badge-container slid-container d-flex overflow-auto p-1 mt-3">
+
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
+            <img src="assets/img/cultural_event4.jpg" class="card-img-top" alt=" صورة عقول رقمية ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> عقول رقمية </h5>
+              <p class="card-text"> التصنيف : فعالية تعليمية-ذكاء اصطناعي</p>
+              <p> المكان : المركز الثقافي-الحسكه </p>
+              <p> التاريخ : من الاثنين 10/11/2025 حتى الخميس 27/11/2025 </p>
+              <p> لمعلومات اكثر اذهب الى التفاصيل </p>
+              <a href="event.html?id=minds" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
+            <img src="assets/img/art_event4.jpg" class="card-img-top" alt=" صورة الوان الحياة ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> الوان الحياة</h5>
+              <p class="card-text"> التصنيف : فعالية ثقافية-فنية </p>
+              <p> المكان : حديقة ام الحسن-حماه</p>
+              <p> التاريخ : من الاربعاء 1/10/2025 حتى الجمعة 24/10/2025</p>
+              <p>لمعلومات اكثر اذهب الى التفاصيل</p>
+              <a href="event.html?id=life" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+          <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
+            <img src="assets/img/cultural_event1.jpg" class="card-img-top" alt=" صورة ملتقى الكتب ">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"> ملتقى الكتب </h5>
+              <p class="card-text"> التصنيف : فعالية ثقافية </p>
+              <p> المكان : مكتبة دار الكتب الوطنية-حلب</p>
+              <p> التاريخ : من الاثنين 22/12/2025 حتى الجمعة 9/1/2026 </p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=books" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+   </main>
+
+                    <!-- main end -->
+
+                    <!-- footer start -->
+  <footer class="bg-dark text-white py-1">
+    <div class="d-flex justify-content-center align-items-center">
+
+      <span class="me-3">جميع الحقوق محفوظة 2025 &copy;</span>
+
+      <a href="https://instagram.com" target="_blank" class="text-white mx-2 fs-5"><i class="bi bi-instagram"></i></a>
+      <a href="https://facebook.com" target="_blank" class="text-white mx-2 fs-5"><i class="bi bi-facebook"></i></a>
+      <a href="https://t.me" target="_blank" class="text-white mx-2 fs-5"><i class="bi bi-telegram"></i></a>
+    </div>
+    </footer>
+                    <!-- Footer end -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/JS/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const search_input = document.getElementById("search_input");
+      const searchBtn = document.querySelector(".search-bar button");
+      const cards_wrapper = document.getElementById("cards_wrapper");
+      const all_cards = Array.from(document.querySelectorAll(".card"));
+
+      const filter_toggle = document.getElementById("filter_toggle");
+      const filter_options = document.getElementById("filter_options");
+      const date_from = document.getElementById("date_from");
+      const date_to = document.getElementById("date_to");
+      const place_filter = document.getElementById("place_filter");
+      const type_filter = document.getElementById("type_filter");
+
+      filter_toggle.addEventListener("click", () => {
+        filter_options.classList.toggle("d-none");
+      });
+
+      function applyFilters() {
+        const q = (search_input.value || "").trim().toLowerCase();
+        const from = date_from.value ? new Date(date_from.value) : null;
+        const to = date_to.value ? new Date(date_to.value) : null;
+        const place = place_filter.value;
+        const type = type_filter.value;
+
+        const filtered = all_cards.filter(card => {
+          const title_element = card.querySelector(".card-title");
+          const title = title_element ? title_element.innerText.toLowerCase() : "";
+          const text = card.innerText.toLowerCase();
+
+          const match_search = (!q || title.includes(q));
+          const match_place = (place === "all" || text.includes(place.toLowerCase()));
+          const match_type = (type === "all" || card.dataset.category.split(" ").includes(type));
+
+          let match_date = true;
+          const date_match = text.match(/\d{1,2}\/\d{1,2}\/\d{4}/);
+          if (date_match) {
+            const card_date = new Date(date_match[0].split("/").reverse().join("-"));
+            if (from && card_date < from) match_date = false;
+            if (to && card_date > to) match_date = false;
+          }
+
+          return match_search && match_place && match_type && match_date;
+        });
+
+        renderCards(filtered);
+      }
+
+      function renderCards(cards) {
+        cards_wrapper.innerHTML = "";
+
+        if (cards.length === 0) {
+          cards_wrapper.innerHTML = `
+          <div class="alert alert-warning text-center my-4" role="alert">
+             لا توجد فعاليات مطابقة لخيارات البحث الحالية.
+          </div>`;
+          return;
+        }
+
+        let slider = null;
+        cards.forEach((card, index) => {
+          if (index % 4 === 0) {
+            slider = document.createElement("div");
+            slider.className = "slid-container d-flex overflow-auto gap-2 p-1 mb-3";
+            cards_wrapper.appendChild(slider);
+          }
+          slider.appendChild(card);
+          card.style.display = "inline-flex";
+        });
+
+        const allSliders = cards_wrapper.querySelectorAll(".slid-container");
+        allSliders.forEach(slid => {
+          slid.style.overflowX = "auto";
+          slid.style.scrollbarWidth = "thin";
+        });
+      }
+
+      [search_input, date_from, date_to, place_filter, type_filter].forEach(el => {
+        el.addEventListener("input", applyFilters);
+        el.addEventListener("change", applyFilters);
+      });
+      searchBtn.addEventListener("click", applyFilters);
+
+      renderCards(all_cards);
+    });
+  </script>
+
+
+
+</body>
+
+</html>

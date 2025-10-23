@@ -1,0 +1,100 @@
+ header,
+ footer {
+   background-color: #0d6efd;
+   color: white;
+   padding: 1rem;
+   text-align: center;
+ }
+
+ header {
+   position: relative;
+ }
+
+ header>a {
+   color: black;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 18px;
+   text-decoration: none;
+   border: 1px solid black;
+   padding: 10px 20px;
+   border-radius: 10px;
+ }
+
+ footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   display: inline;
+ }
+
+ .slid-container {
+   scroll-snap-type: x mandatory;
+   gap: 1rem;
+ }
+
+ .card {
+   scroll-snap-align: start;
+   position: relative;
+ }
+
+ .badge-new {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background-color: red;
+   color: white;
+   padding: 3px 3px;
+   border-radius: 5px;
+   font-size: 0.8rem;
+   font-weight: bold;
+ }
+
+ .card-more {
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: #f8f9fa;
+   border: 2px dashed #0d6efd;
+ }
+
+ main {
+   padding-bottom: 1px;
+ }
+ #scroll_top {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  top: 10px;
+}
+#scroll_top:hover {
+  background-color: black;
+}
+header > div > p  {
+  left: 10px;
+  top : 10px;
+  text-align: center;
+  color: dark;
+  position: relative;
+}
+header > div > p {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 4px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  padding: 2px;
+}
+header > div > p:hover {
+   background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+}
