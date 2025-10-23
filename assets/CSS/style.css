@@ -104,41 +104,32 @@ header > div > p:hover {
    right: 10px;
    margin-top: 65px;
  }
-#darkModeIcon {
+#dark_modeIcon {
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
-body.dark-mode #darkModeIcon {
+body.dark-mode #dark_modeIcon {
   transform: rotate(180deg);
   color: gold;
 }
-body.dark-mode #darkModeToggle {
+body.dark-mode #dark_mode_toggle {
   background-color: #343a40;
   border-color: #666;
 }
-
- /* الوضع الليلي العام */
 .dark-mode {
-  background-color: #0d1117 !important; /* خلفية الموقع */
-  color: #e6edf3 !important;           /* لون النصوص */
+  background-color: #0d1117 !important; 
+  color: #e6edf3 !important;           
   transition: all 0.4s ease-in-out;
 }
-
-/* تعديل navbar */
 .dark-mode .navbar {
   background-color: #161b22 !important;
   border-bottom: 1px solid #30363d;
 }
-
-/* تعديل البطاقات */
 .dark-mode .card {
   background-color: #1e2329 !important;
   color: #e6edf3 !important;
   border: 1px solid #30363d !important;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
-
-/* تعديل الأزرار */
 .dark-mode .btn-outline-primary {
   color: #58a6ff !important;
   border-color: #58a6ff !important;
@@ -147,21 +138,14 @@ body.dark-mode #darkModeToggle {
   background-color: #58a6ff !important;
   color: #0d1117 !important;
 }
-
-/* تعديل البحث */
-
 .dark-mode .form-control::placeholder {
   color: #8b949e !important;
 }
-
-/* تعديل select و option */
 .dark-mode select,
 .dark-mode option {
   background-color: #161b22 !important;
   color: #e6edf3 !important;
 }
-
-/* تعديل footer */
 .dark-mode footer {
   background-color: #161b22 !important;
   border-top: 1px solid #30363d;
@@ -170,29 +154,22 @@ body.dark-mode #darkModeToggle {
   background-color: #161b22 !important;
   color: #e6edf3 !important;
 }
-
-/* روابط التواصل */
 .dark-mode a {
   color: #58a6ff !important;
 }
 .dark-mode a:hover {
   color: #79c0ff !important;
 }
-
-/* تأثير لطيف عند التبديل */
 body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-/* تصحيح شكل الزر في الصفحات العربية RTL */
 html[dir="rtl"] .form-check.form-switch {
-  direction: ltr !important; /* يجعل ترتيب المفتاح مثل الوضع الإنجليزي */
+  direction: ltr !important;
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
-
-/* يعيد أيقونة القمر إلى مكانها الصحيح */
-html[dir="rtl"] #darkModeIcon {
+html[dir="rtl"] #dark_modeIcon {
   margin-left: 0;
   margin-right: 8px;
 }

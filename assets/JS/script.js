@@ -34,8 +34,8 @@ const scroll_top = document.getElementById("scroll_top");
       behavior: "smooth"
     });
   });
-  const toggle = document.getElementById("darkModeToggle");
-  const icon = document.getElementById("darkModeIcon");
+  const toggle = document.getElementById("dark_mode_toggle");
+  const icon = document.getElementById("dark_modeIcon");
 
   // تحميل الوضع المحفوظ
   if (localStorage.getItem("theme") === "dark") {
