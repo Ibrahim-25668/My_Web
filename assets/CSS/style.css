@@ -166,6 +166,10 @@ body.dark-mode #darkModeToggle {
   background-color: #161b22 !important;
   border-top: 1px solid #30363d;
 }
+.dark-mode ul.ul-darkmode > li {
+  background-color: #161b22 !important;
+  color: #e6edf3 !important;
+}
 
 /* روابط التواصل */
 .dark-mode a {
