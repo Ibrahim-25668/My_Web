@@ -34,4 +34,24 @@ const scroll_top = document.getElementById("scroll_top");
       behavior: "smooth"
     });
   });
-  
+  const toggle = document.getElementById("darkModeToggle");
+  const icon = document.getElementById("darkModeIcon");
+
+  // تحميل الوضع المحفوظ
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggle.checked = true;
+    icon.classList.replace("bi-moon-fill", "bi-sun-fill");
+  }
+
+  toggle.addEventListener("change", function () {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      icon.classList.replace("bi-moon-fill", "bi-sun-fill");
+      localStorage.setItem("theme", "dark");
+    } else {
+      icon.classList.replace("bi-sun-fill", "bi-moon-fill");
+      localStorage.setItem("theme", "light");
+    }
+  });
