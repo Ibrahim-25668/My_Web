@@ -20,6 +20,33 @@
     iframe {
       border-radius: 8px;
     }
+    
+    .event-thumb {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--bs-primary);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-thumb:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(13, 110, 253, 0.4);
+    }
+
+    /* الوضع الليلي */
+    body.dark-mode .event-thumb {
+      border-color: #ffc107;
+      box-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
+    }
+
+    .modal-content img {
+      border-radius: 10px;
+      max-height: 80vh;
+      object-fit: contain;
+    }
   </style>
 </head>
 
@@ -93,8 +120,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_damascus1" tabindex="-1">
+         <div class="modal fade" id="image_damascus1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Damascus International Fair1.jpg" class="img-fluid rounded shadow">
@@ -102,8 +128,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_damascus2" tabindex="-1">
+          <div class="modal fade" id="image_damascus2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Damascus International Fair2.jpg" class="img-fluid rounded shadow">
@@ -111,8 +136,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_damascus3" tabindex="-1">
+         <div class="modal fade" id="image_damascus3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Damascus International Fair3.jpg" class="img-fluid rounded shadow">
@@ -239,8 +263,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_football1" tabindex="-1">
+         <div class="modal fade" id="image_football1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Youth Football Training1.jpg" class="img-fluid rounded shadow">
@@ -248,8 +271,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_football2" tabindex="-1">
+          <div class="modal fade" id="image_football2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Youth Football Training2.jpg" class="img-fluid rounded shadow">
@@ -257,8 +279,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_football3" tabindex="-1">
+         <div class="modal fade" id="image_football3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Youth Football Training3.jpg" class="img-fluid rounded shadow">
@@ -360,8 +381,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_turath1" tabindex="-1">
+         <div class="modal fade" id="image_turath1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Turath and Mazak1.jpg" class="img-fluid rounded shadow">
@@ -369,8 +389,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_turath2" tabindex="-1">
+          <div class="modal fade" id="image_turath2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Turath and Mazak2.jpg" class="img-fluid rounded shadow">
@@ -378,8 +397,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_turath3" tabindex="-1">
+         <div class="modal fade" id="image_turath3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Turath and Mazak3.jpg" class="img-fluid rounded shadow">
@@ -506,8 +524,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_homs1" tabindex="-1">
+         <div class="modal fade" id="image_homs1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Homs Nights Festival1.jpg" class="img-fluid rounded shadow">
@@ -515,8 +532,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_homs2" tabindex="-1">
+          <div class="modal fade" id="image_homs2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Homs Nights Festival2.jpg" class="img-fluid rounded shadow">
@@ -524,8 +540,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_homs3" tabindex="-1">
+         <div class="modal fade" id="image_homs3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Homs Nights Festival3.jpg" class="img-fluid rounded shadow">
@@ -629,8 +644,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_parmajha1" tabindex="-1">
+         <div class="modal fade" id="image_parmajha1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Parmajha1.jpg" class="img-fluid rounded shadow">
@@ -638,8 +652,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_parmajha2" tabindex="-1">
+          <div class="modal fade" id="image_parmajha2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Parmajha2.jpg" class="img-fluid rounded shadow">
@@ -647,8 +660,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_parmajha3" tabindex="-1">
+         <div class="modal fade" id="image_parmajha3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Parmajha3.jpg" class="img-fluid rounded shadow">
@@ -752,8 +764,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_car1" tabindex="-1">
+         <div class="modal fade" id="image_car1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Car Race1.jpg" class="img-fluid rounded shadow">
@@ -761,8 +772,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_car2" tabindex="-1">
+          <div class="modal fade" id="image_car2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Car Race2.jpg" class="img-fluid rounded shadow">
@@ -770,8 +780,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_car3" tabindex="-1">
+         <div class="modal fade" id="image_car3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Car Race3.jpg" class="img-fluid rounded shadow">
@@ -874,8 +883,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_sea1" tabindex="-1">
+         <div class="modal fade" id="image_sea1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Sea Sound Evenings1.jpg" class="img-fluid rounded shadow">
@@ -883,8 +891,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_sea2" tabindex="-1">
+          <div class="modal fade" id="image_sea2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Sea Sound Evenings2.jpg" class="img-fluid rounded shadow">
@@ -892,8 +899,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_sea3" tabindex="-1">
+         <div class="modal fade" id="image_sea3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Sea Sound Evenings3.jpg" class="img-fluid rounded shadow">
@@ -996,8 +1002,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_race1" tabindex="-1">
+         <div class="modal fade" id="image_race1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Bicycle Race1.jpg" class="img-fluid rounded shadow">
@@ -1005,8 +1010,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_race2" tabindex="-1">
+          <div class="modal fade" id="image_race2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Bicycle Race2.jpg" class="img-fluid rounded shadow">
@@ -1014,8 +1018,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_race3" tabindex="-1">
+         <div class="modal fade" id="image_race3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Bicycle Race3.jpg" class="img-fluid rounded shadow">
@@ -1118,8 +1121,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_swim1" tabindex="-1">
+         <div class="modal fade" id="image_swim1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Syrian Swimmer Competition1.jpg" class="img-fluid rounded shadow">
@@ -1127,8 +1129,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_swim2" tabindex="-1">
+          <div class="modal fade" id="image_swim2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Syrian Swimmer Competition2.jpg" class="img-fluid rounded shadow">
@@ -1136,8 +1137,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_swim3" tabindex="-1">
+         <div class="modal fade" id="image_swim3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Syrian Swimmer Competition3.jpg" class="img-fluid rounded shadow">
@@ -1240,8 +1240,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_nabd1" tabindex="-1">
+         <div class="modal fade" id="image_nabd1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Multaka Nabd AlMarefa1.jpg" class="img-fluid rounded shadow">
@@ -1249,8 +1248,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_nabd2" tabindex="-1">
+          <div class="modal fade" id="image_nabd2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Multaka Nabd AlMarefa2.jpg" class="img-fluid rounded shadow">
@@ -1258,8 +1256,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_nabd3" tabindex="-1">
+         <div class="modal fade" id="image_nabd3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Multaka Nabd AlMarefa3.jpg" class="img-fluid rounded shadow">
@@ -1349,8 +1346,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_color1" tabindex="-1">
+         <div class="modal fade" id="image_color1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Colors of Childhood1.jpg" class="img-fluid rounded shadow">
@@ -1358,8 +1354,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_color2" tabindex="-1">
+          <div class="modal fade" id="image_color2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Colors of Childhood2.jpg" class="img-fluid rounded shadow">
@@ -1367,8 +1362,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_color3" tabindex="-1">
+         <div class="modal fade" id="image_color3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Colors of Childhood3.jpg" class="img-fluid rounded shadow">
@@ -1457,8 +1451,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_tartus1" tabindex="-1">
+         <div class="modal fade" id="image_tartus1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Tartus Tourism Marathon1.jpg" class="img-fluid rounded shadow">
@@ -1466,8 +1459,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_tartus2" tabindex="-1">
+          <div class="modal fade" id="image_tartus2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Tartus Tourism Marathon2.jpg" class="img-fluid rounded shadow">
@@ -1475,8 +1467,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_tartus3" tabindex="-1">
+         <div class="modal fade" id="image_tartus3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Tartus Tourism Marathon3.jpg" class="img-fluid rounded shadow">
@@ -1578,8 +1569,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_okol1" tabindex="-1">
+         <div class="modal fade" id="image_okol1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Okol Rakmia1.jpg" class="img-fluid rounded shadow">
@@ -1587,8 +1577,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_okol2" tabindex="-1">
+          <div class="modal fade" id="image_okol2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Okol Rakmia2.jpg" class="img-fluid rounded shadow">
@@ -1596,8 +1585,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_okol3" tabindex="-1">
+         <div class="modal fade" id="image_okol3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Okol Rakmia3.jpg" class="img-fluid rounded shadow">
@@ -1687,8 +1675,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_life1" tabindex="-1">
+         <div class="modal fade" id="image_life1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Colors of Life1.jpg" class="img-fluid rounded shadow">
@@ -1696,8 +1683,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_life2" tabindex="-1">
+          <div class="modal fade" id="image_life2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Colors of Life2.jpg" class="img-fluid rounded shadow">
@@ -1705,8 +1691,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_life3" tabindex="-1">
+         <div class="modal fade" id="image_life3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Colors of Life3.jpg" class="img-fluid rounded shadow">
@@ -1810,8 +1795,7 @@
           </div>
         </section>
 
-        <!-- الصورة الأولى -->
-        <div class="modal fade" id="image_book1" tabindex="-1">
+         <div class="modal fade" id="image_book1" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Multaka AlKotob1.jpg" class="img-fluid rounded shadow">
@@ -1819,8 +1803,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثانية -->
-        <div class="modal fade" id="image_book2" tabindex="-1">
+          <div class="modal fade" id="image_book2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Multaka AlKotob2.jpg" class="img-fluid rounded shadow">
@@ -1828,8 +1811,7 @@
           </div>
         </div>
 
-        <!-- الصورة الثالثة -->
-        <div class="modal fade" id="image_book3" tabindex="-1">
+         <div class="modal fade" id="image_book3" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <img src="assets/img/Multaka AlKotob3.jpg" class="img-fluid rounded shadow">
