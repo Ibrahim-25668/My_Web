@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/CSS/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 
   <style>
     body {
@@ -24,14 +24,41 @@
     iframe {
       border-radius: 8px;
     }
+
+    .event-thumb {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--bs-primary);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-thumb:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(13, 110, 253, 0.4);
+    }
+
+    /* الوضع الليلي */
+    body.dark-mode .event-thumb {
+      border-color: #ffc107;
+      box-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
+    }
+
+    .modal-content img {
+      border-radius: 10px;
+      max-height: 80vh;
+      object-fit: contain;
+    }
   </style>
 </head>
 
 <body>
 
-                      <!-- Header Start -->
+  <!-- Header Start -->
   <header class="py-3 text-center bg-primary text-white">
-    
+
     <img src="assets/img/logo.png" alt="دليلك" style="height:80px; display:block; margin:0 auto;">
     <h1 class="mt-2"> دليلك </h1>
     <a href="en/event_en.html"> <span class="fi fi-us"></span></a>
@@ -42,11 +69,12 @@
     </button>
 
     <div class="form-check form-switch d-inline-flex align-items-center ms-3 btn_darkmode">
-      <input class="form-check-input" type="checkbox" id="darkModeToggle">
-      <i id="darkModeIcon" class="bi bi-moon-fill ms-2 text-warning fs-5"></i>
+      <input class="form-check-input" type="checkbox" id="dark_mode_toggle">
+      <i id="dark_mode_icon" class="bi bi-moon-fill ms-2 text-warning fs-5"></i>
     </div>
-    </header>
-                    <!-- Header End -->
+
+  </header>
+  <!-- Header End -->
 
   <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-gradient
  shadow p-1
@@ -73,7 +101,7 @@
 
   <div id="global_alert" class="container mt-3"></div>
 
-                      <!-- main start -->
+  <!-- main start -->
 
   <main class="container my-4">
 
@@ -81,7 +109,49 @@
 
       <!--                      معرض دمشق الدولي                           -->
       <div id="damascus" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/family_event.jpg" class="img-fluid mb-3 w-100" alt=" صورة معرض دمشق الدولي">
+        <img src="assets/img/Damascus International Fair.jpg" class="img-fluid mb-3 w-100" alt=" صورة معرض دمشق الدولي">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Damascus International Fair1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_damascus1">
+            <img src="assets/img/Damascus International Fair2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_damascus2">
+            <img src="assets/img/Damascus International Fair3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_damascus3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_damascus1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Damascus International Fair1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_damascus2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Damascus International Fair2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_damascus3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Damascus International Fair3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">معرض دمشق الدولي</h3>
         <p> المكان: مدينة المعارض - طريق المطار - دمشق</p>
         <p> التاريخ: 25/11/2025 - 25/12/2025</p>
@@ -106,7 +176,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/cultural_event3.jpg" class="card-img-top" alt="صورة تراث و مذاق">
+              <img src="assets/img/Turath and Mazak.jpg" class="card-img-top" alt="صورة تراث و مذاق">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> تراث و مذاق </h5>
                 <p class="card-text">التصنيف : مهرجان اكل شعبي </p>
@@ -118,7 +188,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event1.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
+              <img src="assets/img/Homs Nights Festival.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">مهرجان ليالي حمص </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -130,7 +200,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event2.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
+              <img src="assets/img/Sea Sound Evenings.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> امسيات صوت البحر </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -142,7 +212,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event4.jpg" class="card-img-top" alt="صورة عقول رقمية">
+              <img src="assets/img/Okol Rakmia.jpg" class="card-img-top" alt="صورة عقول رقمية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> عقول رقمية </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ذكاء اصطناعي</p>
@@ -154,7 +224,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event1.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
+              <img src="assets/img/Multaka AlKotob.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى الكتب </h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية </p>
@@ -166,7 +236,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
-              <img src="assets/img/art_event4.jpg" class="card-img-top" alt="صورة الوان الحياة">
+              <img src="assets/img/Colors of Life.jpg" class="card-img-top" alt="صورة الوان الحياة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الحياة</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنية </p>
@@ -185,7 +255,49 @@
       <!--                        تدريب الناشئين كرة القدم                      -->
 
       <div id="football" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/sport_event4.jpg" class="img-fluid mb-3 w-100 w-100" alt=" صورة تدريب الناشئين">
+        <img src="assets/img/Youth Football Training.jpg" class="img-fluid mb-3 w-100 w-100" alt=" صورة تدريب الناشئين">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Youth Football Training1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_football1">
+            <img src="assets/img/Youth Football Training2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_football2">
+            <img src="assets/img/Youth Football Training3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_football3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_football1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Youth Football Training1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_football2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Youth Football Training2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_football3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Youth Football Training3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">تدريب الناشئين - كرة القدم</h3>
         <p> المكان: الملعب البلدي - السويداء</p>
         <p> التاريخ: 30/10/2025 - 28/11/2025</p>
@@ -210,7 +322,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event3.jpg" class="card-img-top" alt="صورة سباق السيارات">
+              <img src="assets/img/Car Race.jpg" class="card-img-top" alt="صورة سباق السيارات">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">سباق سيارات </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -222,7 +334,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event5.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
+              <img src="assets/img/Tartus Tourism Marathon.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ماراثون طرطوس السياحي</h5>
                 <p class="card-text"> التصنيص : فعالية رياضية </p>
@@ -234,7 +346,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event2.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
+              <img src="assets/img/Syrian Swimmer Competition.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
               <div class="card-body d-flex flex-column ">
                 <h5 class="card-title"> مسابقة السباح السوري </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -246,7 +358,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event1.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
+              <img src="assets/img/Bicycle Race.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> سباق الدراجات الهوائية </h5>
                 <p class="card-text">التصنيف : فعالية رياضية </p>
@@ -264,7 +376,49 @@
 
       <!--                  تراث و مذاق                        -->
       <div id="food" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/cultural_event3.jpg" class="img-fluid mb-3 w-100" alt="صورة تراث و مذاق">
+        <img src="assets/img/Turath and Mazak.jpg" class="img-fluid mb-3 w-100" alt="صورة تراث و مذاق">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Turath and Mazak1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_turath1">
+            <img src="assets/img/Turath and Mazak2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_turath2">
+            <img src="assets/img/Turath and Mazak3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_turath3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_turath1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Turath and Mazak1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_turath2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Turath and Mazak2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_turath3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Turath and Mazak3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">مهرجان تراث و مذاق</h3>
         <p> المكان: قلعة حارم - إدلب</p>
         <p> التاريخ: 12/10/2025 - 28/10/2025</p>
@@ -290,7 +444,7 @@
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex"
               data-category="family art cultural">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/family_event.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
+              <img src="assets/img/Damascus International Fair.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">معرض دمشق الدولي</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنيه</p>
@@ -302,7 +456,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event2.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
+              <img src="assets/img/Sea Sound Evenings.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> امسيات صوت البحر </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -314,7 +468,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event1.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
+              <img src="assets/img/Homs Nights Festival.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">مهرجان ليالي حمص </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -326,7 +480,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event5.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
+              <img src="assets/img/Multaka Nabd AlMarefa.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى نبض المعرفة </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ثقافية</p>
@@ -338,7 +492,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event1.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
+              <img src="assets/img/Multaka AlKotob.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى الكتب </h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية </p>
@@ -350,7 +504,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
-              <img src="assets/img/art_event4.jpg" class="card-img-top" alt="صورة الوان الحياة">
+              <img src="assets/img/Colors of Life.jpg" class="card-img-top" alt="صورة الوان الحياة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الحياة</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنية </p>
@@ -368,7 +522,49 @@
 
       <!--                    مهرجان ليالي حمص                   -->
       <div id="homs" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/music_event1.jpg" class="img-fluid mb-3 w-100" alt="صورة مهرجان ليالي حمص">
+        <img src="assets/img/Homs Nights Festival.jpg" class="img-fluid mb-3 w-100" alt="صورة مهرجان ليالي حمص">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Homs Nights Festival1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_homs1">
+            <img src="assets/img/Homs Nights Festival2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_homs2">
+            <img src="assets/img/Homs Nights Festival3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_homs3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_homs1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Homs Nights Festival1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_homs2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Homs Nights Festival2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_homs3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Homs Nights Festival3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">مهرجان ليالي حمص</h3>
         <p> المكان: المشتاية-وادي النصارى-حمص </p>
         <p> التاريخ: 14/11/2025 - 25/11/2025</p>
@@ -392,7 +588,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event2.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
+              <img src="assets/img/Sea Sound Evenings.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> امسيات صوت البحر </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -404,7 +600,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/art_event3.jpg" class="card-img-top" alt="صورة الوان الطفولة">
+              <img src="assets/img/Colors of Childhood.jpg" class="card-img-top" alt="صورة الوان الطفولة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الطفولة </h5>
                 <p class="card-text"> التصنيف : فعالية فنية-رسم</p>
@@ -416,7 +612,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
-              <img src="assets/img/art_event4.jpg" class="card-img-top" alt="صورة الوان الحياة">
+              <img src="assets/img/Colors of Life.jpg" class="card-img-top" alt="صورة الوان الحياة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الحياة</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنية </p>
@@ -429,7 +625,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="family cultural">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/family_event.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
+              <img src="assets/img/Damascus International Fair.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">معرض دمشق الدولي</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنيه</p>
@@ -448,14 +644,59 @@
       <!--                   برمجها                -->
 
       <div id="parmajha" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/cultural_event2.jpg" class="img-fluid mb-3 w-100" alt=" صورة برمجها">
+        <img src="assets/img/Parmajha.jpg" class="img-fluid mb-3 w-100" alt=" صورة برمجها">
         <h3 class="text-primary">برمجها</h3>
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Parmajha1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_parmajha1">
+            <img src="assets/img/Parmajha2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_parmajha2">
+            <img src="assets/img/Parmajha3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_parmajha3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_parmajha1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Parmajha1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_parmajha2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Parmajha2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_parmajha3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Parmajha3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <p> المكان : المركز الثقافي-مقابل مشفى الشفاء الخاص-درعا </p>
         <p> التاريخ: 6/10/2025 - 23/10/2025</p>
         <p> الوصف: شاركونا في الفعالية التعليمية لتدريب الناشئين على لغات البرمجة واستفيدوا من فرصة لتطوير المهارات
           التقنية واكتساب خبرات عملية في بيئة تعليمية تفاعلية وملهمة . <br> يمكنكم حجز تذكرة مباشرة أو عن طريق
           نموذج اتصل بنا .</p>
-       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2546.4666860668262!2d36.0694422918283!3d32.994434910005204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snl!4v1760879103750!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2546.4666860668262!2d36.0694422918283!3d32.994434910005204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2snl!4v1760879103750!5m2!1sen!2snl"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="mt-3">
           <button class="btn btn-success buy_ticket">
             شراء تذكرة
@@ -472,7 +713,7 @@
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex"
               data-category="family art cultural">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/family_event.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
+              <img src="assets/img/Damascus International Fair.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">معرض دمشق الدولي</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنيه</p>
@@ -484,7 +725,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event5.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
+              <img src="assets/img/Multaka Nabd AlMarefa.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى نبض المعرفة </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ثقافية</p>
@@ -496,7 +737,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event4.jpg" class="card-img-top" alt="صورة عقول رقمية">
+              <img src="assets/img/Okol Rakmia.jpg" class="card-img-top" alt="صورة عقول رقمية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> عقول رقمية </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ذكاء اصطناعي</p>
@@ -508,7 +749,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event1.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
+              <img src="assets/img/Multaka AlKotob.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى الكتب </h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية </p>
@@ -527,7 +768,49 @@
       <!--                  سباق سيارات                  -->
 
       <div id="cars" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/sport_event3.jpg" class="img-fluid mb-3 w-100" alt=" صورة سباق سيارات">
+        <img src="assets/img/Car Race.jpg" class="img-fluid mb-3 w-100" alt=" صورة سباق سيارات">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Car Race1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_car1">
+            <img src="assets/img/Car Race2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_car2">
+            <img src="assets/img/Car Race3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_car3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_car1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Car Race1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_car2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Car Race2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_car3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Car Race3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">سباق سيارات</h3>
         <p> المكان: صيدنايا-ريف دمشق </p>
         <p> التاريخ: 12/10/2025 - 25/12/2025</p>
@@ -552,7 +835,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/sport_event4.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
+              <img src="assets/img/Youth Football Training.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> تدريب الناشئين كرة القدم </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -564,7 +847,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event5.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
+              <img src="assets/img/Tartus Tourism Marathon.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ماراثون طرطوس السياحي</h5>
                 <p class="card-text"> التصنيص : فعالية رياضية </p>
@@ -576,7 +859,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event2.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
+              <img src="assets/img/Syrian Swimmer Competition.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
               <div class="card-body d-flex flex-column ">
                 <h5 class="card-title"> مسابقة السباح السوري </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -588,7 +871,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event1.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
+              <img src="assets/img/Bicycle Race.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> سباق الدراجات الهوائية </h5>
                 <p class="card-text">التصنيف : فعالية رياضية </p>
@@ -607,8 +890,50 @@
       <!--                  امسيات صوت البحر                   -->
 
       <div id="sea" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/music_event2.jpg" class="img-fluid mb-3 w-100" alt="صورة امسيات صوت البحر">
+        <img src="assets/img/Sea Sound Evenings.jpg" class="img-fluid mb-3 w-100" alt="صورة امسيات صوت البحر">
         <h3 class="text-primary">امسيات صوت البحر</h3>
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Sea Sound Evenings1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_sea1">
+            <img src="assets/img/Sea Sound Evenings2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_sea2">
+            <img src="assets/img/Sea Sound Evenings3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_sea3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_sea1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Sea Sound Evenings1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_sea2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Sea Sound Evenings2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_sea3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Sea Sound Evenings3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <p> المكان: هوليدي بيتش-طرطوس </p>
         <p> التاريخ: 23/11/2025 - 13/12/2025</p>
         <p> الوصف: عيشو سحر البحر مع أمسيات صوت البحر في طرطوس حيث تتناغم الألحان مع همسات الأمواج ونغمر الأجواء
@@ -632,7 +957,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event1.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
+              <img src="assets/img/Homs Nights Festival.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">مهرجان ليالي حمص </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -644,7 +969,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/art_event3.jpg" class="card-img-top" alt="صورة الوان الطفولة">
+              <img src="assets/img/Colors of Childhood.jpg" class="card-img-top" alt="صورة الوان الطفولة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الطفولة </h5>
                 <p class="card-text"> التصنيف : فعالية فنية-رسم</p>
@@ -656,7 +981,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
-              <img src="assets/img/art_event4.jpg" class="card-img-top" alt="صورة الوان الحياة">
+              <img src="assets/img/Colors of Life.jpg" class="card-img-top" alt="صورة الوان الحياة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الحياة</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنية </p>
@@ -669,7 +994,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="family cultural">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/family_event.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
+              <img src="assets/img/Damascus International Fair.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">معرض دمشق الدولي</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنيه</p>
@@ -688,13 +1013,58 @@
       <!--                   سباق الدراجات الهوائية                  -->
 
       <div id="bike" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/sport_event1.jpg" class="img-fluid mb-3 w-100" alt="صورة سباق الدراجات الهوائية">
+        <img src="assets/img/Bicycle Race.jpg" class="img-fluid mb-3 w-100" alt="صورة سباق الدراجات الهوائية">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Bicycle Race1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_race1">
+            <img src="assets/img/Bicycle Race2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_race2">
+            <img src="assets/img/Bicycle Race3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_race3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_race1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Bicycle Race1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_race2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Bicycle Race2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_race3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Bicycle Race3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">سباق الدراجات الهوائية</h3>
         <p> المكان: الأنطلاق من المدينة الرياضية في اللاذقية وصولا الى رأس شمرا </p>
         <p> التاريخ: 30/11/2025 </p>
         <p> الوصف: انضموا الينا في سباق الدراجات الهوائية من اللاذقية الى رأس شمرا بفعالية رياضية مميزة تجمع بين روح
           التحدي ومتعة الطريق الساحلي . <br> يمكنكم حجز تذكرة مباشرة أو عن طريق نموذج اتصل بنا . </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18348.39223857711!2d35.986357438907476!3d35.61371793574381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15241937afc75ffd%3A0x78b2f5595535edea!2z2KfZhNmF2K_ZitmG2Kkg2KfZhNix2YrYp9i22YrYqSDYp9mE2YTYp9iw2YLZitip!5e0!3m2!1sen!2snl!4v1760879285069!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18348.39223857711!2d35.986357438907476!3d35.61371793574381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15241937afc75ffd%3A0x78b2f5595535edea!2z2KfZhNmF2K_ZitmG2Kkg2KfZhNix2YrYp9i22YrYqSDYp9mE2YTYp9iw2YLZitip!5e0!3m2!1sen!2snl!4v1760879285069!5m2!1sen!2snl"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="mt-3">
           <button class="btn btn-success buy_ticket">
             شراء تذكرة
@@ -709,7 +1079,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event3.jpg" class="card-img-top" alt="صورة سباق السيارات">
+              <img src="assets/img/Car Race.jpg" class="card-img-top" alt="صورة سباق السيارات">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">سباق سيارات </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -721,7 +1091,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event5.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
+              <img src="assets/img/Tartus Tourism Marathon.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ماراثون طرطوس السياحي</h5>
                 <p class="card-text"> التصنيص : فعالية رياضية </p>
@@ -733,7 +1103,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event2.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
+              <img src="assets/img/Syrian Swimmer Competition.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
               <div class="card-body d-flex flex-column ">
                 <h5 class="card-title"> مسابقة السباح السوري </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -746,7 +1116,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/sport_event4.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
+              <img src="assets/img/Youth Football Training.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> تدريب الناشئين كرة القدم </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -764,13 +1134,59 @@
 
       <!--                 مسابقة السباح السوري                   -->
       <div id="swim" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/sport_event2.jpg" class="img-fluid mb-3 w-100" alt=" صورة مسابقة السباح السوري">
+        <img src="assets/img/Syrian Swimmer Competition.jpg" class="img-fluid mb-3 w-100"
+          alt=" صورة مسابقة السباح السوري">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/Syrian Swimmer Competition1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#image_swim1">
+            <img src="assets/img/Syrian Swimmer Competition2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#image_swim2">
+            <img src="assets/img/Syrian Swimmer Competition3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#image_swim3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="image_swim1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Syrian Swimmer Competition1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="image_swim2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Syrian Swimmer Competition2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="image_swim3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/Syrian Swimmer Competition3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">مسابقة السباح السوري</h3>
         <p> المكان: مسبح الجلاء-دمشق </p>
         <p> التاريخ: 2/12/2025 - 20/12/2025</p>
         <p> الوصف: انغمس في أجواء الحماس والتحدي في فعالية السباحة . كن جزءا من التجربة شارك أو شجع فالمتعة بإنتظار
           الجميع . <br> يمكنكم حجز تذكرة مباشرة أو عن طريق نموذج اتصل بنا . </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.0271807400154!2d36.248814675152886!3d33.500669946654625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518de3cba555555%3A0xa429226b438de7a6!2z2YXYs9io2K0g2KfZhNis2YTYp9ih!5e0!3m2!1sen!2snl!4v1760879368765!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.0271807400154!2d36.248814675152886!3d33.500669946654625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518de3cba555555%3A0xa429226b438de7a6!2z2YXYs9io2K0g2KfZhNis2YTYp9ih!5e0!3m2!1sen!2snl!4v1760879368765!5m2!1sen!2snl"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="mt-3">
           <button class="btn btn-success buy_ticket">
             شراء تذكرة
@@ -785,7 +1201,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event3.jpg" class="card-img-top" alt="صورة سباق السيارات">
+              <img src="assets/img/Car Race.jpg" class="card-img-top" alt="صورة سباق السيارات">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">سباق سيارات </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -797,7 +1213,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event5.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
+              <img src="assets/img/Tartus Tourism Marathon.jpg" class="card-img-top" alt="صورة ماراثون طرطوس السياحي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ماراثون طرطوس السياحي</h5>
                 <p class="card-text"> التصنيص : فعالية رياضية </p>
@@ -810,7 +1226,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/sport_event4.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
+              <img src="assets/img/Youth Football Training.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> تدريب الناشئين كرة القدم </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -822,7 +1238,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event1.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
+              <img src="assets/img/Bicycle Race.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> سباق الدراجات الهوائية </h5>
                 <p class="card-text">التصنيف : فعالية رياضية </p>
@@ -841,7 +1257,49 @@
       <!--                  ملتقى نبض المعرفة                   -->
 
       <div id="forum" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/cultural_event5.jpg" class="img-fluid mb-3 w-100" alt=" صورة ملتقى نبض المعرفة">
+        <img src="assets/img/Multaka Nabd AlMarefa.jpg" class="img-fluid mb-3 w-100" alt=" صورة ملتقى نبض المعرفة">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/event1_pic1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#imgModal1">
+            <img src="assets/img/event1_pic2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#imgModal2">
+            <img src="assets/img/event1_pic3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#imgModal3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="imgModal1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="imgModal2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="imgModal3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">ملتقى نبض المعرفة</h3>
         <p> المكان : المركز الثقافي-شارع البور سعيد-دير الزور </p>
         <p> التاريخ: 11/11/2025 - 29/11/2025</p>
@@ -865,7 +1323,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event2.jpg" class="card-img-top" alt="صورة برمجها">
+              <img src="assets/img/Parmajha.jpg" class="card-img-top" alt="صورة برمجها">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> برمجها </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-تدريب ناشئين للبرمجة</p>
@@ -877,7 +1335,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event4.jpg" class="card-img-top" alt="صورة عقول رقمية">
+              <img src="assets/img/Okol Rakmia.jpg" class="card-img-top" alt="صورة عقول رقمية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> عقول رقمية </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ذكاء اصطناعي</p>
@@ -889,7 +1347,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event1.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
+              <img src="assets/img/Multaka AlKotob.jpg" class="card-img-top" alt="صورة ملتقى الكتب">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى الكتب </h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية </p>
@@ -908,7 +1366,49 @@
       <!--                  الوان الطفولة                   -->
 
       <div id="color" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/art_event3.jpg" class="img-fluid mb-3 w-100" alt=" صورة الوان الطفولة">
+        <img src="assets/img/Colors of Childhood.jpg" class="img-fluid mb-3 w-100" alt=" صورة الوان الطفولة">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/event1_pic1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#imgModal1">
+            <img src="assets/img/event1_pic2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#imgModal2">
+            <img src="assets/img/event1_pic3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#imgModal3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="imgModal1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="imgModal2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="imgModal3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">الوان الطفولة</h3>
         <p> المكان: قاعة بسمة-العشة-ريف القنيطرة </p>
         <p> التاريخ: 15/10/2025 - 23/10/2025</p>
@@ -932,7 +1432,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event2.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
+              <img src="assets/img/Sea Sound Evenings.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> امسيات صوت البحر </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -944,7 +1444,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event1.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
+              <img src="assets/img/Homs Nights Festival.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">مهرجان ليالي حمص </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -956,7 +1456,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art family">
-              <img src="assets/img/art_event4.jpg" class="card-img-top" alt="صورة الوان الحياة">
+              <img src="assets/img/Colors of Life.jpg" class="card-img-top" alt="صورة الوان الحياة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الحياة</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنية </p>
@@ -974,8 +1474,50 @@
 
       <!--                  ماراثون طرطوس السياحي                   -->
       <div id="race" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/sport_event5.jpg" class="img-fluid mb-3 w-100" alt="صورة ماراثون طرطوس السياحي">
+        <img src="assets/img/Tartus Tourism Marathon.jpg" class="img-fluid mb-3 w-100" alt="صورة ماراثون طرطوس السياحي">
         <h3 class="text-primary">ماراثون طرطوس السياحي</h3>
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/event1_pic1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#imgModal1">
+            <img src="assets/img/event1_pic2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#imgModal2">
+            <img src="assets/img/event1_pic3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#imgModal3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="imgModal1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="imgModal2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="imgModal3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <p> المكان: بدءا من قلب الكورنيش البحري وصولا الى منتجع جواندا وبالعكس </p>
         <p> التاريخ: 22/11/2025</p>
         <p> الوصف: ماراثون طرطوس السياحي الذي يجمع بين المتعة والإثارة ,انطلق مع العدائين واستمتع بالمناظر الخلابة
@@ -999,7 +1541,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event3.jpg" class="card-img-top" alt="صورة سباق السيارات">
+              <img src="assets/img/Car Race.jpg" class="card-img-top" alt="صورة سباق السيارات">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">سباق سيارات </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -1012,7 +1554,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/sport_event4.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
+              <img src="assets/img/Youth Football Training.jpg" class="card-img-top" alt="صورة تدريب الناشئين">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> تدريب الناشئين كرة القدم </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -1024,7 +1566,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event2.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
+              <img src="assets/img/Syrian Swimmer Competition.jpg" class="card-img-top" alt="صورة مسابقة السباح السوري">
               <div class="card-body d-flex flex-column ">
                 <h5 class="card-title"> مسابقة السباح السوري </h5>
                 <p class="card-text"> التصنيف : فعالية رياضية </p>
@@ -1036,7 +1578,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="sport">
-              <img src="assets/img/sport_event1.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
+              <img src="assets/img/Bicycle Race.jpg" class="card-img-top" alt="صورة سباق الدراجات الهوائية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> سباق الدراجات الهوائية </h5>
                 <p class="card-text">التصنيف : فعالية رياضية </p>
@@ -1054,13 +1596,58 @@
 
       <!--                  عقول رقمية                  -->
       <div id="minds" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/cultural_event4.jpg" class="img-fluid mb-3 w-100" alt="صورة عقول رقمية">
+        <img src="assets/img/Okol Rakmia.jpg" class="img-fluid mb-3 w-100" alt="صورة عقول رقمية">
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/event1_pic1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#imgModal1">
+            <img src="assets/img/event1_pic2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#imgModal2">
+            <img src="assets/img/event1_pic3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#imgModal3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="imgModal1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="imgModal2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="imgModal3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <h3 class="text-primary">عقول رقمية</h3>
         <p> المكان: المركز الثقافي-الحسكه </p>
         <p> التاريخ: 10/11/2025 - 27/11/2025</p>
         <p> الوصف: فعالية عقول رقمية تأخذكفي رحله ممتعة لعالم الذكاء الصناعي حيث تتعلم أحدث التقنيات وتكتشف كيف يمكن
           للإبداع البشري أن يلتقي بالذكاء الرقمي . <br> يمكنكم حجز تذكرة مباشرة أو عن طريق نموذج اتصل بنا . </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.57902811233!2d40.74984737528952!3d36.516022783668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x154ba9ed5454aaab%3A0x6c0105e3010bb2cb!2z2YXYsdmD2LIg2KvZgtin2YHZig!5e0!3m2!1sen!2snl!4v1760879462167!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.57902811233!2d40.74984737528952!3d36.516022783668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x154ba9ed5454aaab%3A0x6c0105e3010bb2cb!2z2YXYsdmD2LIg2KvZgtin2YHZig!5e0!3m2!1sen!2snl!4v1760879462167!5m2!1sen!2snl"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="mt-3">
           <button class="btn btn-success buy_ticket">
             شراء تذكرة
@@ -1075,7 +1662,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event2.jpg" class="card-img-top" alt="صورة برمجها">
+              <img src="assets/img/Parmajha.jpg" class="card-img-top" alt="صورة برمجها">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> برمجها </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-تدريب ناشئين للبرمجة</p>
@@ -1087,7 +1674,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event5.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
+              <img src="assets/img/Multaka Nabd AlMarefa.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى نبض المعرفة </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ثقافية</p>
@@ -1099,27 +1686,69 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event1.jpg" class="card-img-top" alt="صورة ملتقى الكتب"">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title"> ملتقى الكتب </h5>
-                <p class="card-text"> التصنيف : فعالية ثقافية </p>
-                <p> المكان : مكتبة دار الكتب الوطنية-حلب</p>
-                <p> التاريخ : من الاثنين 22/12/2025 حتى الجمعة 9/1/2026 </p>
-                <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
-                <a href="event.html?id=books" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
-              </div>
+              <img src="assets/img/Multaka AlKotob.jpg" class="card-img-top" alt="صورة ملتقى الكتب"">
+              <div class=" card-body d-flex flex-column">
+              <h5 class="card-title"> ملتقى الكتب </h5>
+              <p class="card-text"> التصنيف : فعالية ثقافية </p>
+              <p> المكان : مكتبة دار الكتب الوطنية-حلب</p>
+              <p> التاريخ : من الاثنين 22/12/2025 حتى الجمعة 9/1/2026 </p>
+              <p> لمعلومات اكثر اذهب إلى التفاصيل </p>
+              <a href="event.html?id=books" class="btn btn-outline-primary  mt-auto">التفاصيل</a>
             </div>
-
           </div>
+
         </div>
+      </div>
 
       </div>
 
       <!--                  الوان الحياة                   -->
 
       <div id="life" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/art_event4.jpg" class="img-fluid mb-3 w-100" alt="صورة الوان الحياة">
+        <img src="assets/img/Colors of Life.jpg" class="img-fluid mb-3 w-100" alt="صورة الوان الحياة">
         <h3 class="text-primary">الوان الحياة</h3>
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/event1_pic1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#imgModal1">
+            <img src="assets/img/event1_pic2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#imgModal2">
+            <img src="assets/img/event1_pic3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#imgModal3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="imgModal1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="imgModal2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="imgModal3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <p> المكان: حديقة ام الحسن-حماه </p>
         <p> التاريخ: 1/10/2025 - 24/10/2025</p>
         <p> الوصف: شاركونا في مهرجان الزهور فعالية ثقافية فتية تجمع بين الجمال والإبداع حيث تتفتح الزهور مع أنغام
@@ -1143,7 +1772,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event2.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
+              <img src="assets/img/Sea Sound Evenings.jpg" class="card-img-top" alt="صورة امسيات صوت البحر">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> امسيات صوت البحر </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -1155,7 +1784,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/art_event3.jpg" class="card-img-top" alt="صورة الوان الطفولة">
+              <img src="assets/img/Colors of Childhood.jpg" class="card-img-top" alt="صورة الوان الطفولة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> الوان الطفولة </h5>
                 <p class="card-text"> التصنيف : فعالية فنية-رسم</p>
@@ -1167,7 +1796,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="art">
-              <img src="assets/img/music_event1.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
+              <img src="assets/img/Homs Nights Festival.jpg" class="card-img-top" alt="صورة مهرجان ليالي حمص">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">مهرجان ليالي حمص </h5>
                 <p class="card-text"> التصنيف : فعالية فنية </p>
@@ -1180,7 +1809,7 @@
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="family cultural">
               <span class="badge-new">NEW</span>
-              <img src="assets/img/family_event.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
+              <img src="assets/img/Damascus International Fair.jpg" class="card-img-top" alt="صورة معرض دمشق الدولي">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">معرض دمشق الدولي</h5>
                 <p class="card-text"> التصنيف : فعالية ثقافية-فنيه</p>
@@ -1199,8 +1828,50 @@
       <!--                 ملتقى الكتب                   -->
 
       <div id="books" class="event-details card p-3 shadow-sm  col-lg-6">
-        <img src="assets/img/cultural_event1.jpg" class="img-fluid mb-3 w-100" alt="صورة ملتقى الكتب">
+        <img src="assets/img/Multaka AlKotob.jpg" class="img-fluid mb-3 w-100" alt="صورة ملتقى الكتب">
         <h3 class="text-primary">ملتقى الكتب</h3>
+
+        <section class="container my-4">
+          <h4 class="text-primary mb-3 text-center"> : صور إضافية من الفعالية</h4>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <img src="assets/img/event1_pic1.jpg" class="event-thumb" alt="صورة إضافية 1" data-bs-toggle="modal"
+              data-bs-target="#imgModal1">
+            <img src="assets/img/event1_pic2.jpg" class="event-thumb" alt="صورة إضافية 2" data-bs-toggle="modal"
+              data-bs-target="#imgModal2">
+            <img src="assets/img/event1_pic3.jpg" class="event-thumb" alt="صورة إضافية 3" data-bs-toggle="modal"
+              data-bs-target="#imgModal3">
+          </div>
+        </section>
+
+        <!-- الصورة الأولى -->
+        <div class="modal fade" id="imgModal1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic1.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="modal fade" id="imgModal2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic2.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="modal fade" id="imgModal3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img src="assets/img/event1_pic3.jpg" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+
+
         <p> المكان: مكتبة دار الكتب الوطنية-حلب </p>
         <p> التاريخ: 22/12/2025 - 9/1/2025</p>
         <p> الوصف: شاركونا في ملتقى الكتب فعالية ثقافية تجمع بين عشاق القراءة لتبادل المعرفة ومشاركة الكتب والأفكار
@@ -1224,7 +1895,7 @@
           <div class="slid-container d-flex overflow-auto p-1">
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event2.jpg" class="card-img-top" alt="صورة برمجها">
+              <img src="assets/img/Parmajha.jpg" class="card-img-top" alt="صورة برمجها">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> برمجها </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-تدريب ناشئين للبرمجة</p>
@@ -1236,7 +1907,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event5.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
+              <img src="assets/img/Multaka Nabd AlMarefa.jpg" class="card-img-top" alt="صورة ملتقى نبض المعرفة">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> ملتقى نبض المعرفة </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ثقافية</p>
@@ -1248,7 +1919,7 @@
             </div>
 
             <div class="card flex-shrink-0 " style="width: 16rem; display:inline-flex" data-category="cultural">
-              <img src="assets/img/cultural_event4.jpg" class="card-img-top" alt="صورة عقول رقمية">
+              <img src="assets/img/Okol Rakmia.jpg" class="card-img-top" alt="صورة عقول رقمية">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"> عقول رقمية </h5>
                 <p class="card-text"> التصنيف : فعالية تعليمية-ذكاء اصطناعي</p>
@@ -1266,11 +1937,11 @@
 
     </center>
 
-   </main>
+  </main>
 
-                    <!-- main end -->
+  <!-- main end -->
 
-                    <!-- footer start -->
+  <!-- footer start -->
   <footer class="bg-dark text-white py-1">
     <div class="d-flex justify-content-center align-items-center">
 
@@ -1280,8 +1951,8 @@
       <a href="https://facebook.com" class="text-white mx-2 fs-5"><i class="bi bi-facebook"></i></a>
       <a href="https://t.me" class="text-white mx-2 fs-5"><i class="bi bi-telegram"></i></a>
     </div>
-    </footer>
-                    <!-- Footer end -->
+  </footer>
+  <!-- Footer end -->
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
